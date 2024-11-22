@@ -1,6 +1,6 @@
 import PathParameters from "./PathParameters.js";
 import QueryParameters from "./QueryParameters.js";
-import WorkingWithObjects from "./workingWithObjects.js";
+import WorkingWithObjects from "./WorkingWithObjects.js";
 import ModuleObjects from "./ModuleObjects.js";
 import WorkingWithArrays from "./WorkingWithArrays.js";
 export default function Lab5(app) {
