@@ -25,4 +25,7 @@ export function findCoursesForEnrolledUser(userId) {
     Object.assign(course, courseUpdates);
     return course;
   }
-  
+  export function findCoursesById(courseId) {
+    const { courses } = Database;
+    return courses.filter((course) => course._id === courseId);
+  }  

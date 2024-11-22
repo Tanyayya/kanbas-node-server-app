@@ -1,9 +1,6 @@
 import Database from "../Database/index.js";
 
-export function findAssignmentsForCourse(moduleId) {
-  const { assignments } = Database;
-  return assignments.filter((assignment) => assignment.module === moduleId);
-}
+
 export function createAssignments(assignment) {
     const newAssignment = { ...assignment, _id: Date.now().toString() };
     Database.assignments = [...Database.assignments, newAssignment];
@@ -19,3 +16,8 @@ export function createAssignments(assignment) {
     Object.assign(assignment, assignmentUpdates);
     return assignment;
   }
+  export function findAssignmentsForModules(courseId) {
+    const { assignments } = Database;
+    return assignments.filter((assignment) => assignment.course === courseId);
+  }
+  
