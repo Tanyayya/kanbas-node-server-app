@@ -120,4 +120,3 @@ app.get("/api/users/:userId/enrolled-courses", getEnrolledCourses);
   app.post("/api/users/signout", signout);
   app.post("/api/users/profile", profile);
 }
-

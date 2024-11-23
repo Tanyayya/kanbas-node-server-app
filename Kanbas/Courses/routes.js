@@ -45,11 +45,7 @@ export default function CourseRoutes(app) {
     const newAssignment = assignmentsDao.createAssignments(assignment);
     res.send(newAssignment);
   });
-  app.delete("/api/modules/:moduleId", async (req, res) => {
-    const { moduleId } = req.params;
-    const status = await modulesDao.deleteModule(moduleId);
-    res.send(status);
-  });
+  
  
 }
 
