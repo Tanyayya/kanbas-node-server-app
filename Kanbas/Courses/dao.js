@@ -25,6 +25,7 @@ export function updateCourse(courseId, courseUpdates) {
   Object.assign(course, courseUpdates);
   return course;
 }
+
   export function findCoursesById(courseId) {
     const { courses } = Database;
     return courses.filter((course) => course._id === courseId);
