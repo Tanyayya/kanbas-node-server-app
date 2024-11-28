@@ -7,7 +7,7 @@ import session from "express-session";
 import CourseRoutes from "./Kanbas/Courses/routes.js";
 import ModuleRoutes from "./Kanbas/Modules/routes.js"
 import AssignmentRoutes from "./Kanbas/Assignments/routes.js"
-
+import EnrollmentRoutes from './Kanbas/Enrollments/routes.js';
 // "https://67477918efbc0f0008d5e13e--chimerical-cupcake-1f6716.netlify.app" ||
 import "dotenv/config";
 
@@ -38,4 +38,5 @@ Hello(app)
 Lab5(app);
 ModuleRoutes(app);
 AssignmentRoutes(app);
+EnrollmentRoutes(app);
 app.listen(process.env.PORT || 4000)
