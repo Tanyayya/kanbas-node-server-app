@@ -46,10 +46,7 @@ export default function EnrollmentRoutes(app) {
     }
   });
 
-  /**
-   * GET /api/users/:userId/enrollments
-   * Retrieves enrollments for a specific user.
-   */
+
   app.get("/api/users/:userId/enrollments", (req, res) => {
     const { userId } = req.params;
     try {
