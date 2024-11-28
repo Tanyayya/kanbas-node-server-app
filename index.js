@@ -8,13 +8,13 @@ import CourseRoutes from "./Kanbas/Courses/routes.js";
 import ModuleRoutes from "./Kanbas/Modules/routes.js"
 import AssignmentRoutes from "./Kanbas/Assignments/routes.js"
 
-
+// "https://67477918efbc0f0008d5e13e--chimerical-cupcake-1f6716.netlify.app" ||
 import "dotenv/config";
 
 const app = express()
 app.use(cors({
     credentials: true,
-    origin: "https://67477918efbc0f0008d5e13e--chimerical-cupcake-1f6716.netlify.app" ||"http://localhost:3000",
+    origin: "http://localhost:3000",
 })); // 
 const sessionOptions = {
     secret: process.env.SESSION_SECRET || "kanbas",
