@@ -14,7 +14,7 @@ import "dotenv/config";
 const app = express()
 app.use(cors({
     credentials: true,
-    origin: "https://67477918efbc0f0008d5e13e--chimerical-cupcake-1f6716.netlify.app" ||"http://localhost:3000",
+    origin: "https://6748a92b4870700008574c01--chimerical-cupcake-1f6716.netlify.app" ||"http://localhost:3000",
 })); // 
 const sessionOptions = {
     secret: process.env.SESSION_SECRET || "kanbas",
