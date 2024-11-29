@@ -10,12 +10,16 @@ import AssignmentRoutes from "./Kanbas/Assignments/routes.js"
 import EnrollmentRoutes from './Kanbas/Enrollments/routes.js';
 // 
 import "dotenv/config";
+import mongoose from "mongoose";
 
+const CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas"
+
+mongoose.connect(CONNECTION_STRING);
 const app = express()
 app.use(cors({
     credentials: true,
-    origin: "https://assignment5--chimerical-cupcake-1f6716.netlify.app" ||"http://localhost:3000",
-})); // 
+    origin:"http://localhost:3000",
+})); //  "https://assignment5--chimerical-cupcake-1f6716.netlify.app" ||
 const sessionOptions = {
     secret: process.env.SESSION_SECRET || "kanbas",
     resave: false,

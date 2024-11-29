@@ -17,10 +17,14 @@ export default function UserRoutes(app) {
         res.json(newEnrollment);
       };
       app.post("/api/users/current/enrolled", addEnrollments);
+      const findAllUsers = async (req, res) => {
+        const users = await dao.findAllUsers();
+        res.json(users);
+      };
     
   const createUser = (req, res) => { };
   const deleteUser = (req, res) => { };
-  const findAllUsers = (req, res) => { };
+  
   const findUserById = (req, res) => { };
   const updateUser = (req, res) => {
     const userId = req.params.userId;
@@ -33,20 +37,20 @@ export default function UserRoutes(app) {
 
  
 
-  const signup = (req, res) => {const user = dao.findUserByUsername(req.body.username);
+  const signup = async (req, res) => {const user =await dao.findUserByUsername(req.body.username);
     if (user) {
       res.status(400).json(
         { message: "Username already in use" });
       return;
     }
-    const currentUser = dao.createUser(req.body);
+    const currentUser =await dao.createUser(req.body);
     req.session["currentUser"] = currentUser;
 
 };
 
-const signin = (req, res) => {
+const signin = async (req, res) => {
     const { username, password } = req.body;
-    const currentUser = dao.findUserByCredentials(username, password);
+    const currentUser = await dao.findUserByCredentials(username, password);
     if (currentUser) {
       req.session["currentUser"] = currentUser;
       res.json(currentUser);
