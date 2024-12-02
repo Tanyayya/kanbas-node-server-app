@@ -23,7 +23,7 @@ const assignment = {
       
       app.get("/lab5/assignment/completed/:newCompleted", (req, res) => {
         const { newCompleted } = req.params;
-        assignment.completed = newCompleted === "true";  // Ensure it's a boolean
+        assignment.completed = newCompleted === "true";  
         res.json(assignment);
       });
       
