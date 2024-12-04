@@ -17,7 +17,7 @@ mongoose.connect(CONNECTION_STRING);
 const app = express()
 app.use(cors({
     credentials: true,
-    origin:"http://localhost:3000",
+    origin:"https://assignment6--chimerical-cupcake-1f6716.netlify.app/#/Kanbas/Account/Signin"||"http://localhost:3000",
 })); //  "https://assignment5--chimerical-cupcake-1f6716.netlify.app" ||
 const sessionOptions = {
     secret: process.env.SESSION_SECRET || "kanbas",
