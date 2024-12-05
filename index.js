@@ -18,7 +18,7 @@ const app = express()
 app.use(cors({
     credentials: true,
     origin:"https://assignment6--chimerical-cupcake-1f6716.netlify.app"||"http://localhost:3000",
-})); //  "https://assignment5--chimerical-cupcake-1f6716.netlify.app" ||
+}));  //"https://assignment6--chimerical-cupcake-1f6716.netlify.app"||
 const sessionOptions = {
     secret: process.env.SESSION_SECRET || "kanbas",
     resave: false,
